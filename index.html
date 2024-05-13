@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Love Note</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Welcome,Budi!</h1>
+    <p>How do you call your hubby ? </p>
+    <form id="loveForm">
+      <input type="text" id="loveName" placeholder="Your love name" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('loveForm').onsubmit = function () {
+      localStorage.setItem('loveName', document.getElementById('loveName').value);
+      window.location = 'love_page.html';
+      return false;
+    };
+  </script>
+</body>
+
+</html>

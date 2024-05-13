@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Your Love Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Hi Love, you remember this cute moment, <span id="loveNameDisplay"></span>!</h1>
+    <img src="img1.jpg" alt="Us Together" width="500">
+    <audio controls autoplay hidden>
+      <source src=".MOV" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <video width="500" controls autoplay class="flip-horizontal">
+      <source src="video.MOV" type="video/mp4" autopl>
+      Your browser does not support the video tag.
+    </video>
+    <blockquote id="loveQuote">"Random love quote will be here."</blockquote>
+  </div>
+  <script>
+    document.getElementById('loveNameDisplay').innerText = localStorage.getItem('loveName') || 'Love';
+    // Add more quotes if you like
+    const quotes = [
+      "You are my today and all of my tomorrows.",
+      "Every time I see you, I fall in love all over again.",
+      "You are the reason I wake up with a smile every day."
+    ];
+    document.getElementById('loveQuote').innerText = quotes[Math.floor(Math.random() * quotes.length)];
+  </script>
+</body>
+
+</html>
